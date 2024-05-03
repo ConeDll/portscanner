@@ -1,0 +1,5 @@
+{
+    "port": 1024,
+    "show-closed-ports": false,
+    "save":false
+}
