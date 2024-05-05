@@ -3,7 +3,11 @@ import colorama
 from colorama import Fore
 import threading
 import os
+from optparse import OptionParser
 import json
+parser = OptionParser()
+parser.add_option("-t","--target",dest="target",help="target")
+(options,args) = parser.parse_args()
 try:
     with open("settings.json", "r") as check:
         testoku = json.load(check)
@@ -46,7 +50,7 @@ def scan_port(target, port):
     finally:
         s.close()
 def main():
-    target = input(f"{Fore.YELLOW}Target: ")
+    target = options.target
     print(f"{Fore.CYAN}--------------------Starting Scan---------------------------")
     start_port = 1
     end_port = portaraligi
