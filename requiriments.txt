@@ -1,5 +1,6 @@
-colorama
 threading
 json
 os
+optparse
 socket
+colorama
